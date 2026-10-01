@@ -1,10 +1,8 @@
-const r = require("raylib");
+function isOverlap(d, p) {
+    const end1 = d.x + d.w;
+    const end2 = p.x + p.w;
 
-function isOverlap(start1, width1, start2, width2) {
-    const end1 = start1 + width1;
-    const end2 = start2 + width2;
-
-    return !(end2 < start1 || start2 > end1);
+    return !(end2 < d.x || p.x > end1);
 }
 
 module.exports ={
